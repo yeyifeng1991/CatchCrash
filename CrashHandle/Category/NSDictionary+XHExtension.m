@@ -19,7 +19,7 @@
     NSError *err;
     NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
     if (err) {
-        XHLog(@"json serialize failue");
+//        XHLog(@"json serialize failue");
         return nil;
     }
     return dic;
