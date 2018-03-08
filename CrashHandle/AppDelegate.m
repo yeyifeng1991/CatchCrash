@@ -14,6 +14,10 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -47,6 +51,14 @@
 //    }];
 }
 
+/*
+ Not running：app还没运行
+ Inactive：app运行在foreground但没有接收事件
+ Active：app运行在foreground和正在接收事件
+ Background：运行在background和正在执行代码
+ Suspended：运行在background但没有执行代码
+ */
+#pragma mark -
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
